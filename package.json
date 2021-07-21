@@ -1,12 +1,12 @@
 {
     "name": "slepkojs",
-    "version": "0.0.3",
+    "version": "0.0.32",
     "author": "Ewelina Ślepko, Filip Talaga",
     "license": "ISC",
-    "main": "index.js",
     "scripts": {
         "lint": "eslint src",
-        "build": "rollup -c"
+        "build": "rollup -c",
+        "publish": "npm publish build"
     },
     "devDependencies": {
         "@rollup/plugin-typescript": "^8.2.3",
