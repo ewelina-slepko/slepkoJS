@@ -1,14 +1,24 @@
 import typescript from '@rollup/plugin-typescript';
+import dts from 'rollup-plugin-dts';
 
-export default {
-    input: './src/main.ts',
-    watch: {
-        include: './src/**',
-        clearScreen: false,
+const config = [
+    {
+        input: './src/main.ts',
+        watch: {
+            include: './src/**',
+            clearScreen: false,
+        },
+        output: {
+            file: './build/index.js',
+            format: 'es',
+        },
+        plugins: [typescript()],
     },
-    output: {
-        file: './build/index.js',
-        format: 'es',
+    {
+        input: './src/main.ts',
+        output: [{ file: './build/index.d.ts', format: 'es' }],
+        plugins: [dts()],
     },
-    plugins: [typescript()],
-};
+];
+
+export default config;

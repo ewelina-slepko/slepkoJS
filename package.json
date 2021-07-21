@@ -1,6 +1,6 @@
 {
     "name": "slepkojs",
-    "version": "0.0.32",
+    "version": "0.0.33",
     "author": "Ewelina Ślepko, Filip Talaga",
     "license": "ISC",
     "scripts": {
@@ -14,6 +14,7 @@
         "@typescript-eslint/parser": "^4.28.4",
         "eslint": "^7.31.0",
         "rollup": "^2.53.2",
+        "rollup-plugin-dts": "^3.0.2",
         "typescript": "^4.3.5"
     },
     "homepage": "https://github.com/ewelina-slepko/slepkoJS#readme",
@@ -23,5 +24,6 @@
     },
     "bugs": {
         "url": "https://github.com/ewelina-slepko/slepkoJS/issues"
-    }
+    },
+    "types": "build/index.d.ts"
 }
