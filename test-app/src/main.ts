@@ -1,9 +1,4 @@
-type Thing = {
-    prop: number;
-};
+import app from './components/app/app';
+import { init } from './slepkojs/index';
 
-const temp: Thing = {
-    prop: 14,
-};
-
-console.log(`hi hello ${temp.prop}`);
+init(app);
