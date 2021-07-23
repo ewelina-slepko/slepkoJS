@@ -1,7 +1,7 @@
 import typescript from '@rollup/plugin-typescript';
 import htmlTemplate from 'rollup-plugin-generate-html-template';
 import serve from 'rollup-plugin-serve';
-import livereload from 'rollup-plugin-livereload';
+import liveReload from 'rollup-plugin-livereload';
 
 const production = !process.env.ROLLUP_WATCH;
 const outputDir = 'build';
@@ -19,6 +19,6 @@ export default {
             target: 'index.html',
         }),
         !production && serve({ open: true, contentBase: outputDir }),
-        !production && livereload(outputDir),
+        !production && liveReload(outputDir),
     ],
 };
